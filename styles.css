@@ -1,0 +1,471 @@
+/* รีเซ็ตพื้นฐาน */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+/* จัด Header ของแต่ละ Section ให้มีระยะห่างและชิดซ้าย */
+main h1, main h2 {
+    margin-top: 20px; /* เพิ่มระยะห่างด้านบน */
+    margin-bottom: 10px; /* เพิ่มระยะห่างด้านล่าง */
+    padding-left: 20px; /* เพิ่ม Padding ด้านซ้าย */
+}
+
+/* Navigation Menu */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px; /* เพิ่ม Padding ด้านบน-ล่าง และซ้าย-ขวา */
+    display: inline-block; /* ให้ Padding ทำงานได้กับลิงก์ */
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #0055a5; /* เพิ่มสีพื้นหลังเมื่อ Hover */
+    border-radius: 4px; /* มุมโค้งมน */
+}
+
+/* Hamburger Menu Icon */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    background-color: white;
+    height: 3px;
+    width: 25px;
+    margin: 3px 0;
+}
+
+/* แสดง Hamburger Menu บนมือถือ */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: flex; /* แสดงปุ่ม Hamburger */
+    }
+
+    .nav-list {
+        display: none; /* ซ่อนเมนูแนวนอน */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #003366;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-list.active {
+        display: flex; /* แสดงเมนูเมื่อคลิก */
+    }
+
+    .nav-list li {
+        margin: 15px 0;
+    }
+}
+
+/* จัด Layout ให้ Main มีพื้นที่เต็ม */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* ทำให้ Body เต็มความสูง */
+}
+
+main {
+    flex: 1; /* ให้ Main ยืดขยายเต็มพื้นที่ */
+    padding: 20px;
+    background-color: #f4f4f4; /* สีพื้นหลังของเนื้อหาหลัก */
+}
+
+/* Header ทั่วไป */
+header {
+    background-color: #003366; /* สีน้ำเงินเข้ม */
+    color: white; /* สีข้อความ */
+    text-align: center;
+    padding: 20px 0; /* เพิ่ม Padding ด้านบน-ล่าง */
+    width: 100%; /* กำหนดความกว้างเต็มจอ */
+    margin: 0; /* ไม่ให้มี Margin ด้านนอก */
+    box-sizing: border-box; /* รวม Padding และ Border ไว้ในความกว้าง */
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header, footer {
+    background-color: #003366;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+section.intro {
+    background-color: #e9e9e9;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+section.highlights article {
+    margin-bottom: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* ส่วนที่เที่ยวแนะนำ */
+.highlights {
+    text-align: center;
+    margin: 20px;
+}
+
+.highlight-container {
+    display: flex; /* ใช้ Flexbox */
+    flex-wrap: wrap; /* ให้ขึ้นบรรทัดใหม่เมื่อพื้นที่ไม่พอ */
+    justify-content: center; /* จัดวางให้อยู่ตรงกลาง */
+    gap: 20px; /* ระยะห่างระหว่างการ์ด */
+}
+
+.highlight-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: calc(33.33% - 40px); /* กว้าง 33.33% ของพื้นที่, หัก gap 20px สองด้าน */
+    max-width: 300px; /* กำหนดความกว้างสูงสุดของการ์ด */
+    overflow: hidden; /* ป้องกันขอบภาพเกิน */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.highlight-item img {
+    width: 100%; /* ทำให้รูปเต็มพื้นที่ของ container */
+    height: 200px; /* กำหนดความสูงคงที่ */
+    object-fit: cover; /* ครอบคลุมพื้นที่โดยไม่เสียสัดส่วน */
+}
+
+.highlight-item h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.highlight-item p {
+    padding: 0 10px 10px;
+    font-size: 0.9rem;
+    color: #666;
+}
+/* สีพื้นหลังหลัก */
+body {
+    background-color: #f9f9f9; /* สีเทาอ่อน */
+    color: #333; /* สีข้อความ */
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header และ Navbar */
+header {
+    background-color: #003366; /* สีน้ำเงินเข้ม */
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+
+
+/* Section บทนำ (Intro) */
+.intro {
+    background-color: #ffffff; /* สีขาว */
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Section ที่เที่ยวแนะนำ */
+.highlights {
+    background-color: #eef5ff; /* พื้นหลังสีฟ้าอ่อน */
+    padding: 40px 20px; /* เพิ่มระยะห่างด้านใน */
+    border-radius: 8px; /* ขอบมน */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* เงาเบาๆ */
+    margin: 20px 0; /* ระยะห่างด้านบนและด้านล่าง */
+}
+
+.highlight-container {
+    display: flex;
+    justify-content: center; /* จัดให้อยู่ตรงกลาง */
+    gap: 30px; /* ระยะห่างระหว่างการ์ด */
+    flex-wrap: wrap; /* ขึ้นบรรทัดใหม่เมื่อพื้นที่ไม่พอ */
+}
+
+.highlight-item {
+    background-color: #ffffff; /* สีพื้นหลังของการ์ด */
+    border-radius: 12px; /* ขอบมน */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* เพิ่มเงาเพื่อความเด่น */
+    overflow: hidden; /* ป้องกันรูปภาพเกินขอบ */
+    width: 300px; /* ความกว้างของการ์ด */
+    text-align: center; /* จัดข้อความตรงกลาง */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* เพิ่มเอฟเฟกต์ */
+}
+
+.highlight-item:hover {
+    transform: translateY(-5px); /* ยกการ์ดขึ้นเล็กน้อยเมื่อชี้เมาส์ */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* เพิ่มเงาเมื่อ hover */
+}
+
+.highlight-item img {
+    width: 100%; /* รูปภาพเต็มความกว้างของการ์ด */
+    height: 180px; /* ความสูงคงที่ */
+    object-fit: cover; /* ปรับรูปให้พอดีและไม่เสียสัดส่วน */
+    border-radius: 12px 12px 0 0; /* มุมบนรูปภาพโค้งมน */
+}
+
+.highlight-item h3 {
+    margin: 10px 0 5px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.highlight-item p {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0 10px 15px;
+}
+
+/* Footer */
+footer {
+    background-color: #003366; /* สีน้ำเงินเข้ม */
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 20px;
+}
+
+/* Container หลัก */
+.destination-container {
+    display: grid; /* ใช้ CSS Grid */
+    grid-template-columns: repeat(3, 1fr); /* แบ่งเป็น 3 คอลัมน์เท่ากัน */
+    gap: 20px; /* ระยะห่างระหว่างการ์ด */
+    justify-items: center; /* จัดให้อยู่กึ่งกลางแนวนอน */
+    margin: 20px auto; /* จัดกึ่งกลางและเพิ่มระยะห่างจากด้านบน */
+    max-width: 1200px; /* จำกัดความกว้างสูงสุด */
+}
+
+/* การ์ดแต่ละใบ */
+.destination-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    width: 100%; /* ใช้พื้นที่เต็ม Grid */
+    max-width: 300px; /* กำหนดความกว้างสูงสุด */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.destination-item:hover {
+    transform: translateY(-5px); /* เพิ่มเอฟเฟกต์ยกขึ้นเมื่อ hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* รูปภาพภายในการ์ด */
+.destination-item img {
+    width: 100%;
+    height: 180px; /* ความสูงคงที่ */
+    object-fit: cover; /* ทำให้รูปภาพไม่เสียสัดส่วน */
+
+}
+
+.destination-item h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.destination-item p {
+    color: #666;
+    font-size: 0.9rem;
+    padding: 0 10px 15px;
+}
+
+@media screen and (max-width: 992px) {
+    .destination-container {
+        grid-template-columns: repeat(2, 1fr); /* แสดง 2 การ์ดต่อแถว */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .destination-container {
+        grid-template-columns: 1fr; /* แสดง 1 การ์ดต่อแถว */
+    }
+}
+
+
+
+
+
+/* ส่วนข้อมูลการติดต่อ */
+.contact-info {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h2 {
+    margin-bottom: 10px;
+    color: #003366;
+}
+
+.contact-info a {
+    color: #003366;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* ส่วนฟอร์ม */
+.contact-form {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #003366;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    background-color: #003366;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.contact-form button:hover {
+    background-color: #0055a5;
+}
+
+/* Footer (ติดล่างสุดเสมอ) */
+footer {
+    background-color: #003366; /* สีน้ำเงินเข้ม */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+    width: 100%;
+}
+
