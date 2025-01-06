@@ -38,6 +38,20 @@ nav ul li a:hover {
     border-radius: 4px; /* มุมโค้งมน */
 }
 
+.navbar .logo {
+    position: absolute; /* วางตำแหน่งแน่นอน */
+    top: 10px; /* ระยะห่างจากด้านบน */
+    left: 10px; /* ระยะห่างจากด้านซ้าย */
+}
+
+.navbar .logo img {
+    width: 100px; /* กำหนดขนาดเล็ก */
+    height: 100px; /* ขนาดเท่ากันเพื่อให้เป็นวงกลม */
+    border-radius: 50%; /* ทำให้รูปภาพเป็นวงกลม */
+    object-fit: cover; /* ให้รูปภาพครอบคลุมพื้นที่ได้พอดี */
+    border: 2px solid white; /* เส้นขอบรอบโลโก้ */
+}
+
 /* Hamburger Menu Icon */
 .menu-toggle {
     display: none;
