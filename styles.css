@@ -16,6 +16,9 @@ header {
     padding: 10px 20px;
 }
 
+
+
+
 /* จัด Header ของแต่ละ Section ให้มีระยะห่างและชิดซ้าย */
 main h1, main h2 {
     margin-top: 20px; /* เพิ่มระยะห่างด้านบน */
@@ -50,6 +53,36 @@ nav ul li a:hover {
     border-radius: 50%; /* ทำให้รูปภาพเป็นวงกลม */
     object-fit: cover; /* ให้รูปภาพครอบคลุมพื้นที่ได้พอดี */
     border: 2px solid white; /* เส้นขอบรอบโลโก้ */
+}
+
+/* ปรับขนาด Search Box */
+.navbar .search-box {
+    display: flex;
+    align-items: center;
+    width: 300px; /* ความกว้างที่ต้องการ */
+    margin-left: auto; /* ดันให้ Search Box อยู่ขวาสุด */
+}
+
+.navbar .search-box input {
+    width: 100%; /* ใช้พื้นที่เต็มของ Container */
+    padding: 10px 15px; /* เพิ่ม Padding ให้ดูใหญ่ขึ้น */
+    font-size: 1rem; /* ขนาดตัวอักษรใหญ่ขึ้น */
+    border: 2px solid #ccc; /* ขอบหนาขึ้น */
+    border-radius: 8px 0 0 8px; /* มุมโค้งมน */
+}
+
+.navbar .search-box button {
+    padding: 10px 15px; /* ขยายปุ่ม */
+    font-size: 1rem; /* ขนาดตัวอักษรใหญ่ขึ้น */
+    background-color: #0055a5;
+    color: white;
+    border: none;
+    border-radius: 0 8px 8px 0; /* มุมโค้งมน */
+    cursor: pointer;
+}
+
+.navbar .search-box button:hover {
+    background-color: #003366; /* สีเข้มขึ้นเมื่อ Hover */
 }
 
 /* Hamburger Menu Icon */
