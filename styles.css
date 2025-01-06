@@ -55,11 +55,12 @@ nav ul li a:hover {
     border: 2px solid white; /* เส้นขอบรอบโลโก้ */
 }
 
+
 /* ปรับขนาด Search Box */
 .navbar .search-box {
     display: flex;
     align-items: center;
-    width: 300px; /* ความกว้างที่ต้องการ */
+    width: 500px; /* ความกว้างที่ต้องการ */
     margin-left: auto; /* ดันให้ Search Box อยู่ขวาสุด */
 }
 
