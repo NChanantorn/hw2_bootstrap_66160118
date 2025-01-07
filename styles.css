@@ -45,6 +45,7 @@ nav ul li a:hover {
     position: absolute; /* วางตำแหน่งแน่นอน */
     top: 10px; /* ระยะห่างจากด้านบน */
     left: 10px; /* ระยะห่างจากด้านซ้าย */
+    
 }
 
 .navbar .logo img {
@@ -59,9 +60,10 @@ nav ul li a:hover {
 /* ปรับขนาด Search Box */
 .navbar .search-box {
     display: flex;
-    align-items: center;
+    justify-content: center; /* จัดให้อยู่ตรงกลางแนวนอน */
+    margin-bottom: 10px; /* ระยะห่างด้านล่าง */
     width: 500px; /* ความกว้างที่ต้องการ */
-    margin-left: auto; /* ดันให้ Search Box อยู่ขวาสุด */
+    
 }
 
 .navbar .search-box input {
@@ -108,6 +110,8 @@ nav ul li a:hover {
 
     .nav-list {
         display: none; /* ซ่อนเมนูแนวนอน */
+        justify-content: center; /* จัดให้อยู่ตรงกลางแนวนอน */
+        z-index: 15; /* ให้อยู่เหนือทุกอย่าง */
         position: absolute;
         top: 60px;
         left: 0;
