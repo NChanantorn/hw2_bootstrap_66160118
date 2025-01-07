@@ -371,14 +371,96 @@ footer {
     margin-top: 20px;
 }
 
+footer a {
+    color: white; /* เปลี่ยนสีลิงก์เป็นสีขาว */
+    text-decoration: none; /* เอาการขีดเส้นใต้ลิงก์ออก */
+}
+
+footer a:hover {
+    color: #f8f9fa; /* เปลี่ยนสีเมื่อวางเมาส์เหนือลิงก์ */
+    text-decoration: underline; /* เพิ่มการขีดเส้นใต้เมื่อวางเมาส์ */
+}
+
+footer {
+    background-color: #343a40;
+    color: #f8f9fa;
+    padding: 40px 0;
+}
+
+footer h5 {
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+footer ul {
+    padding-left: 0;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: #f8f9fa;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+.social-icons i {
+    font-size: 24px;
+    margin-right: 15px;
+    transition: color 0.3s;
+}
+
+.social-icons i:hover {
+    color: #007bff;
+}
+
+.footer-column {
+    margin-bottom: 30px;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+    border-top: 1px solid #6c757d;
+    padding-top: 10px;
+}
+
+@media (max-width: 768px) {
+    footer {
+        padding: 30px 0;
+    }
+}
+
 /* Container หลัก */
 .destination-container {
     display: grid; /* ใช้ CSS Grid */
-    grid-template-columns: repeat(3, 1fr); /* แบ่งเป็น 3 คอลัมน์เท่ากัน */
+    grid-template-columns: repeat(4, 1fr); /* แบ่งเป็น 3 คอลัมน์เท่ากัน */
     gap: 20px; /* ระยะห่างระหว่างการ์ด */
     justify-items: center; /* จัดให้อยู่กึ่งกลางแนวนอน */
     margin: 20px auto; /* จัดกึ่งกลางและเพิ่มระยะห่างจากด้านบน */
     max-width: 1200px; /* จำกัดความกว้างสูงสุด */
+}
+
+/* การจัดเรียงใน Tablet */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr); /* 2 คอลัมน์ใน Tablet */
+    }
+}
+
+/* การจัดเรียงใน Mobile */
+@media (max-width: 480px) {
+    .container {
+        grid-template-columns: 1fr; /* 1 คอลัมน์ใน Mobile */
+    }
 }
 
 /* การ์ดแต่ละใบ */
