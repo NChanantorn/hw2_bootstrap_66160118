@@ -517,3 +517,119 @@ footer {
     width: 100%;
 }
 
+
+
+
+
+
+/* Hero Section */
+#hero {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-item img {
+    height: 70vh; /* ปรับความสูงให้เหมาะสม */
+    object-fit: cover; /* รูปครอบคลุมพื้นที่ */
+}
+
+.carousel-caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0; /* ยืดถึงขอบขวา */
+        width: 100%; /* ครอบคลุมความกว้าง */
+        background-color: rgba(0, 0, 0, 0.6); /* สีพื้นหลังโปร่งแสง */
+        color: white;
+        padding: 20px;
+        display: flex;
+        justify-content: center; /* จัดข้อความให้อยู่ตรงกลางแนวนอน */
+        align-items: center; /* จัดข้อความให้อยู่ตรงกลางแนวตั้ง */
+        text-align: center;
+        z-index: 10; /* ให้อยู่เหนือรูปภาพ */
+        box-sizing: border-box; /* รวม Padding กับ Width */
+    } 
+
+.carousel-caption h5 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.carousel-caption p {
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .carousel-item img {
+        height: 50vh; /* ลดความสูงสำหรับมือถือ */
+    }
+
+    .carousel-caption h5 {
+        font-size: 1.5rem;
+    }
+
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+}
+
+/* ปรับรูปภาพใน Carousel ให้แสดงเต็มพื้นที่ */
+.carousel-item img {
+    height: 90vh; /* กำหนดความสูงเป็น 90% ของหน้าจอ */
+    width: 80%; /* ให้ครอบคลุมความกว้าง */
+    margin: auto; /* จัดให้อยู่กึ่งกลาง */
+    background-color: #000; /* ใส่สีพื้นหลัง (ถ้ามีขอบว่าง) */
+}
+
+/* ปรับให้รองรับอุปกรณ์ขนาดเล็ก */
+@media screen and (max-width: 768px) {
+    .carousel-item img {
+        height: 70vh; /* ลดความสูงสำหรับมือถือ */
+        object-fit: contain; /* แสดงภาพทั้งหมดโดยไม่ตัด */
+    }
+}
+
+/* Overlay สำหรับ Caption */
+.carousel-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* คาดเต็มหน้าจอ */
+    height: 100%; /* ครอบคลุม Carousel ทั้งหมด */
+    display: flex; /* ใช้ Flexbox จัดข้อความ */
+    flex-direction: column;
+    justify-content: center; /* จัดข้อความให้อยู่กึ่งกลางแนวตั้ง */
+    align-items: center; /* จัดข้อความให้อยู่กึ่งกลางแนวนอน */
+    background-color: rgba(0, 0, 0, 0.5); /* สีพื้นหลังโปร่งแสง */
+    color: white; /* สีข้อความ */
+    text-align: center;
+    z-index: 10; /* แสดงข้อความอยู่เหนือ Carousel */
+    padding: 20px; /* ระยะห่างภายใน */
+}
+
+.carousel-overlay h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.carousel-overlay p {
+    font-size: 1.2rem;
+    margin: 10px 0 0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .carousel-overlay h1 {
+        font-size: 2rem;
+    }
+
+    .carousel-overlay p {
+        font-size: 1rem;
+    }
+}
+
+
+
+
