@@ -1,1 +1,22 @@
 # hw2_bootstrap_66160118
+add git command use in project
+- git add index
+- git commit -m "เพิ่มรูปโลโก้"
+- git add index.html
+- git commit -m "เปลี่ยนรูปโลโก้"
+- git add styles.css
+- git commit -m "กำหนดขนาดและตำแหน่งโลโก้"
+- git add index.html
+- git commit -m "เพิ่ม search box"
+- git add styles.css
+- git commit -m "กำหนดขนาดและตำแหน่ง seacrh box"
+- git commit -m "เพิ่ม Bootstrap Carousel "
+- git commit -m "เพิ่ม รูปภาพลงใน Carousel"
+- git commit -m "เพิ่มแถบ overlsay บน Carrousel"
+- git commit -m "เพิ่มข้อความบน overlay"
+- git commit -m "จัดเรียง overlay ให้อยู่กึ่งกลาง"
+- git commit -m "เปลี่ยนลกศร next and prev เป็นสีดำ"
+- git commit -m "เพิ่มสถานที่ท่องเที่ยว"
+- git commit -m "เพิ่ม ข้อมูลลง footer"
+- git commit -m "ใช้ Grid จัดเรียงข้อความบน footer"
+- git commit -m "เพิ่ม footer ลงในทุกหน้า"
