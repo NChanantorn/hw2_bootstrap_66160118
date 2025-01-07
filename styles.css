@@ -633,6 +633,10 @@ footer {
         font-size: 1rem;
     }
 }
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: black; /* เปลี่ยนสีพื้นหลังเป็นดำ */
+}
 
 
 
